@@ -1,9 +1,9 @@
 /**
  *
- *  Aeon Smart Energy Switch 6 (gen5)
+ *  Aeon Smart Energy Dimmer 6 (gen5)
  *
- *  Copyright 2017 jbisson
- *  based on James P ('elasticdev'), Mr Lucky, lg kahn code.
+ *  Copyright 2017 brenthaag
+ *  based on jbisson code.
  *
  *
  *  The brightness intensity only works in energy mode (does not work in nightlight mode)
@@ -22,21 +22,7 @@
  *
  *  Revision History
  *  ==============================================
- *  2017-09-04 Version 5.2.0  Removed defaultValues on preference screen as a work-around for a platform bug, crash protection fixes
- *  2017-09-02 Version 5.1.6  More display clean-up and fixed reversed ranges on min watts/percent change in report prefs (Nezmo)
- *  2017-08-15 Version 5.1.5  Cleaned-up display for iOS and other display issues (Nezmo)
- *  2017-02-24 Version 5.1.4  Bug fixed around getDeviceInfo
- *  2017-01-21 Version 5.1.0  Added energy meter cost per hours/week/month/year feature, fixed display issues
- *  2016-11-13 Version 5.0.0  Added Z-Wave secure inclusion support (note that you'll need to manually set it up during configuration)
- *  2016-11-12 Version 4.0.5  Added AT&T rebrand fingerprint + added force refresh report notification update preference
- *  2016-08-31 Version 4.0.4  Fixed fingerprint number.
- *  2016-08-15 Version 4.0.3  Fixed setcolor logic when using the Color Control capability
- *  2016-08-12 Version 4.0.2  Added version in preference setting
- *  2016-08-11 Version 4.0.1  Added switch disabled visual on the main tile, added firmware version
- *  2016-08-11 Version 4.0.0  Added log preference, enable/disable switch preference, added dev documentation, changed fingerprint
- *  2016-08-08 Version 3.0.1  Adapt device handler to support gen5 version 3.1
- *  2016-08-08 Version 3.0
- *  2015-09-01 version 2 - lg kahn
+ *  2018-01-xx version 0.1 - brenthaag
  *
  *
  *  Developer's Notes
@@ -66,11 +52,11 @@
  */
 
 def clientVersion() {
-    return "5.2.0"
+    return "0.1"
 }
 
 metadata {
-    definition(name: "Aeon Labs Smart Switch 6 Gen5", namespace: "jbisson", author: "Jonathan Bisson") {
+    definition(name: "Aeon Labs Smart Dimmer 6 Gen5", namespace: "brenthaag", author: "Brent Haag") {
         capability "Switch"
         capability "Polling"
         capability "Power Meter"
@@ -94,9 +80,8 @@ metadata {
         attribute "deviceMode", "String"
 
         // Base on https://community.smartthings.com/t/new-z-wave-fingerprint-format/48204
-        fingerprint mfr: "0086", prod: "0103", model: "0060" // Aeon brand
-        fingerprint mfr: "0134", prod: "0259", model: "0096" // AT&T rebrand
-        fingerprint type: "1001", cc: "5E,25,26,33,70,27,32,81,85,59,72,86,7A,73", ccOut: "5A,82"
+        fingerprint mfr: "0086", prod: "0103", model: "0063" // Aeon brand
+        // fingerprint type: "1001", cc: "5E,25,26,33,70,27,32,81,85,59,72,86,7A,73", ccOut: "5A,82"
     }
 
     tiles(scale: 2) {
