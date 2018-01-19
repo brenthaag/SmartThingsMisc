@@ -26,28 +26,30 @@
  *
  *
  *  Developer's Notes
- *  Raw Description	0 0 0x1001 0 0 0 11 0x5E 0x25 0x26 0x33 0x70 0x27 0x32 0x81 0x85 0x59 0x72 0x86 0x7A 0x73 0xEF 0x5A 0x82
+ *  ?????????????????????Raw Description	0 0 0x1001 0 0 0 11 0x5E 0x25 0x26 0x33 0x70 0x27 0x32 0x81 0x85 0x59 0x72 0x86 0x7A 0x73 0xEF 0x5A 0x82
  *  Z-Wave Supported Command Classes:
  *  Code Name					Version
  *  ==== ======================================	=======
  *  0x5E COMMAND_CLASS_ZWAVE_PLUS_INFO
- *  0x25 COMMAND_CLASS_SWITCH_BINARY          V1                 Implemented
- *  0x26 COMMAND_CLASS_SWITCH_MULTILEVEL      V3 (new in gen5)   Implemented - not used
- *  0x32 COMMAND_CLASS_METER                  V3                 Implemented
+ *  0x26 COMMAND_CLASS_SWITCH_MULTILEVEL	V2		Not Implemented - not used
+ *  0x33 COMMAND_CLASS_COLOR_SWITCH		V1		Not implemented
+ *  0x32 COMMAND_CLASS_METER			V3		Not Implemented
+ *  0x70 COMMAND_CLASS_CONFIGURATION		V1		Not Implemented 
+ *  0x27 COMMAND_CLASS_SWITCH_ALL		V1		Not implemented
+ *  0x81 COMMAND_CLASS_CLOCK			V1		Not implemented
+ *  0x85 COMMAND_CLASS_ASSOCIATION		V2		Not implemented
+ *  0x72 COMMAND_CLASS_MANUFACTURER_SPECIFIC	V2		Implemented
+ *  0x59 COMMAND_CLASS_ASSOCIATION_GRP_INFO	V1		Not implemented 
+ *  0x86 COMMAND_CLASS_VERSION			V2		Implemented 
+ *  0xEF COMMAND_CLASS_MARK			V1		Not implemented 
+ *  0x82 COMMAND_CLASS_HAIL			V1		Implemented - not used 
+ *  0x7A COMMAND_CLASS_FIRMWARE_UPDATE_MD_V2	V2		Implemented 
+ *  0x73 COMMAND_CLASS_POWERLEVEL		V1		Not implemented
+ *  0x5A COMMAND_CLASS_DEVICE_RESET_LOCALLY	V1		Not implemented
+ *  0x98 COMMAND_CLASS_SECURITY			V1 (For secure Inclusion)	Implemented
+ *
+ * Commands slightly different in jbissons's code:
  *  0x33 COMMAND_CLASS_COLOR                  V1 (new in gen5)   Not implemented
- *  0x70 COMMAND_CLASS_CONFIGURATION          V1                 Implemented
- *  0x27 COMMAND_CLASS_SWITCH_ALL             V1                 Not implemented
- *  0x81 COMMAND_CLASS_CLOCK                  V1 (new in gen5)   Not implemented
- *  0x85 COMMAND_CLASS_ASSOCIATION            V2                 Not implemented
- *  0x72 COMMAND_CLASS_MANUFACTURER_SPECIFIC  V2                 Implemented
- *  0x59 COMMAND_CLASS_ASSOCIATION_GRP_INFO   V1                 Not implemented
- *  0x86 COMMAND_CLASS_VERSION                V2                 Implemented
- *  0xEF COMMAND_CLASS_MARK                   V1                 Not implemented
- *  0x82 COMMAND_CLASS_HAIL                   V1                 Implemented - not used
- *  0x7A COMMAND_CLASS_FIRMWARE_UPDATE_MD_V2  V2 (new in gen5)   Implemented
- *  0x73 COMMAND_CLASS_POWERLEVEL             V1 (new in gen5)   Not implemented
- *  0x5A COMMAND_CLASS_DEVICE_RESET_LOCALLY   V1 (new in gen5)   Not implemented
- *  0x98 COMMAND_CLASS_SECURITY               V1 (For secure Inclusion) Implemented
  *
  */
 
