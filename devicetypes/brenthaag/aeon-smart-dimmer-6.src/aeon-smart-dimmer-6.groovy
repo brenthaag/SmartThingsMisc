@@ -2,7 +2,7 @@
  *
  *  Aeon Smart Energy Dimmer 6 (gen5)
  *
- *  Copyright 2017 brenthaag
+ *  Copyright 2018 brenthaag
  *  based on jbisson code.
  *
  *
@@ -83,7 +83,7 @@ metadata {
 
         // Base on https://community.smartthings.com/t/new-z-wave-fingerprint-format/48204
         fingerprint mfr: "0086", prod: "0103", model: "0063" // Aeon brand
-        // fingerprint type: "1001", cc: "5E,25,26,33,70,27,32,81,85,59,72,86,7A,73", ccOut: "5A,82"
+        // fingerprint type: "1101", cc: "5E,25,26,33,70,27,32,81,85,59,72,86,7A,73", ccOut: "5A,82"
     }
 
     tiles(scale: 2) {
