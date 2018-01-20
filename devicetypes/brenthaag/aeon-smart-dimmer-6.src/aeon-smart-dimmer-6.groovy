@@ -94,6 +94,9 @@ metadata {
                 attributeState "turningOn", label: '${name}', action: "switch.off", icon: "st.Appliances.appliances17", backgroundColor: "#00a0dc", nextState: "turningOff"
                 attributeState "turningOff", label: '${name}', action: "switch.on", icon: "st.Appliances.appliances17", backgroundColor: "#ffffff", nextState: "turningOn"
             }
+            tileAttribute("device.level", key: "SLIDER_CONTROL") {
+                attributeState "level", action:"switch level.setLevel"
+            }
             tileAttribute("statusText3", key: "SECONDARY_CONTROL") {
                 attributeState "statusText3", label: '${currentValue}'
             }
@@ -201,7 +204,7 @@ metadata {
 }
 
 preferences {
-    input title: "", description: "Aeon Smart Switch 6 (gen5) v${clientVersion()}", displayDuringSetup: true, type: "paragraph", element: "paragraph"
+    input title: "", description: "Aeon Smart Dimmer 6 (gen5) v${clientVersion()}", displayDuringSetup: true, type: "paragraph", element: "paragraph"
 
     input name: "switchDisabled", type: "bool", title: "Disable switch on/off\n", defaultValue: "false", displayDuringSetup: true, required: true
     input name: "refreshInterval", type: "number", title: "Refresh interval \n\nSet the refresh time interval (seconds) between each report [Default (300)].\n", displayDuringSetup: true, required: true
@@ -244,7 +247,7 @@ def parse(String description) {
 
     if (description != "updated") {
         if (description.contains("command: 5E02")) {
-            logInfo "Ignoring command 5E02 has it's not supported by the platform."
+            logInfo "Ignoring command 5E02 as it's not supported by the platform."
             return
         }
 
