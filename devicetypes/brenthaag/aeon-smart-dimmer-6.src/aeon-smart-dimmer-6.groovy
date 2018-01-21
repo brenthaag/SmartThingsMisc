@@ -346,9 +346,9 @@ def zwaveEvent(physicalgraph.zwave.commands.basicv1.BasicSet cmd) {
  *
  *  Short	value
  */
-def zwaveEvent(physicalgraph.zwave.commands.switchmultilevelv2.SwitchMultilevelReport cmd) {
-    createEvent(name: "switch", value: cmd.value ? "on" : "off", displayed: false, isStateChange: true)
+def zwaveEvent(physicalgraph.zwave.commands.switchmultilevelv3.SwitchMultilevelReport cmd) {
 }
+
 
 /**
  *  COMMAND_CLASS_METER (0x32)
